@@ -10,3 +10,5 @@ apt install /var/cache/apt/archives/temurin-8-jdk_8.0.332.0.0+9-1_amd64.deb -y
 ln -s $SKYNET_HOME/libs/OpenSplice /opt/OpenSplice
 ln -s $SKYNET_HOME/libs/OpenSplice/opensplice.sh /etc/profile.d/
 ln -s $SKYNET_HOME/bin/chonosSkynet.sh /usr/bin/chonosSkynet
+
+echo "Reboot is mandatory! - Please restart the system"
