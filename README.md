@@ -5,7 +5,7 @@ We are using ContexNet
 ## How to Install?
 
     apt update; apt install git
-    git -C /opt clone git clone git://git.code.sf.net/p/chonos/skynet chonos-skynet
+    git -C /opt clone git://git.code.sf.net/p/chonos/skynet chonos-skynet
     /opt/chonos-skynet/bin/install.sh
     reboot
 
@@ -16,6 +16,7 @@ chonosSkynet &
 ## How to Use?
 
     /* Initial beliefs and rules */
+
     /* Initial goals */
     !start.
     /* Plans */
