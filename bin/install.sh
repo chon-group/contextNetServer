@@ -1,14 +1,24 @@
 #! /bin/sh
 SKYNET_HOME="/opt/contextNetServer"
 
-# Intalação do Java JDK 8
-#ln -s $SKYNET_HOME/deps/debian10-dpkgs/*.deb /var/cache/apt/archives/
-#apt install /var/cache/apt/archives/adoptium-ca-certificates_1.0.0-1_all.deb -y
-#apt install /var/cache/apt/archives/temurin-8-jdk_8.0.332.0.0+9-1_amd64.deb -y
+apt update; apt install wget apt-transport-https gnupg -y
+wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | apt-key add -
+echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+apt update; apt install temurin-8-jre -y
 
-#Instalação do OpenSplice
+# Installing OpenSplice
 ln -s $SKYNET_HOME/libs/OpenSplice /opt/OpenSplice
 ln -s $SKYNET_HOME/libs/OpenSplice/opensplice.sh /etc/profile.d/
 ln -s $SKYNET_HOME/bin/chonosSkynet.sh /usr/bin/chonosSkynet
 
-echo "Reboot is mandatory! - Please restart the system"
+# Modify the getty service file to enable autologin for root
+cp /lib/systemd/system/getty@.service /etc/systemd/system/getty@.service.backup
+sed -i 's|ExecStart=-/sbin/agetty |ExecStart=-/sbin/agetty --autologin root |' /lib/systemd/system/getty@.service
+sed -i 's|^ExecStart=-/sbin/agetty |ExecStartPre=/bin/login -f root\nExecStart=-/sbin/agetty |' /lib/systemd/system/getty@.service
+
+echo "clear" >> /root/.profile
+echo 'echo "Waiting for DHCP Configuration"' >> /root/.profile
+echo "dhclient" >> /root/.profile
+echo 'echo "IP Address: $(hostname -I)' >> /root/.profile
+
+reboot
