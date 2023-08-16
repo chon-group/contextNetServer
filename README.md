@@ -2,13 +2,8 @@
 
 ## How to Install?
 
-    apt update; apt install git wget apt-transport-https gnupg
-    wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | apt-key add -
-    echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
-    apt update; apt install temurin-8-jre
     git -C /opt clone https://github.com/chon-group/contextNetServer.git
     /opt/contextNetServer/bin/install.sh
-    reboot
 
 ## How to Start?
 
