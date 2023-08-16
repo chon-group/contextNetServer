@@ -1,5 +1,5 @@
 #! /bin/sh
-SKYNET_HOME="/opt/chonos-skynet"
+SKYNET_HOME="/opt/contextNetServer"
 
 # Intalação do Java JDK 8
 #ln -s $SKYNET_HOME/deps/debian10-dpkgs/*.deb /var/cache/apt/archives/
