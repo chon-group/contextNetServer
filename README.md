@@ -1,7 +1,7 @@
 ﻿# ContextNet Server!
 
 ## How to Install?
-
+    apt update; apt install git -y
     git -C /opt clone https://github.com/chon-group/contextNetServer.git
     /opt/contextNetServer/bin/install.sh
 
