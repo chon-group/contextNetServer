@@ -1,5 +1,5 @@
 #! /bin/sh
-SKYNET_HOME="/opt/chonos-skynet"
+SKYNET_HOME="/opt/contextNetServer"
 
 #while true
 #do
