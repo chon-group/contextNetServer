@@ -5,7 +5,7 @@ while true
 do
 	echo "Starting ContexNetServer"
 	ipv4=$(hostname -I | awk '{print $1}')
-	if [[ $ipv4 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+	if [ -n $ipv4 ]; then
      		/usr/bin/java -jar $SKYNET_HOME/libs/OpenSplice/contextnet-2.7.jar "$ipv4" 5500 OpenSplice &
 		pid=$!
 		echo $pid
