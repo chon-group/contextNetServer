@@ -1,0 +1,1 @@
+../../opt/contextNetServer/libs/OpenSplice/opensplice.sh

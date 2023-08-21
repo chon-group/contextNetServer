@@ -1,13 +1,11 @@
 ﻿# ContextNet Server!
 
 ## How to Install?
-    apt update; apt install git -y
-    git -C /opt clone https://github.com/chon-group/contextNetServer.git
-    /opt/contextNetServer/bin/install.sh
-
-## How to Start?
-
-chonosSkynet &
+    apt update; apt install wget apt-transport-https gnupg -y
+    wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | apt-key add -
+    echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+    echo "deb [trusted=yes] http://packages.chon.group/ chonos main" | tee /etc/apt/sources.list.d/chonos.list
+    apt update; apt install temurin-8-jre contextnet-server -y
 
 ## How to Use?
 
@@ -38,6 +36,8 @@ chonosSkynet &
         -waiting_for_transfer[source(X)].
         
 
-## How to Contact?
+## Copyright
+M. Endler, G. Baptista, L. D. Silva, R. Vasconcelos, M. Malcher, V. Pantoja, V. Pinheiro, and J. Viterbo. 2011. ContextNet: context reasoning and sharing middleware for large-scale pervasive collaboration and social networking. In Proceedings of the Workshop on Posters and Demos Track (PDT '11). Association for Computing Machinery, New York, NY, USA, Article 2, 1–2. https://doi.org/10.1145/2088960.2088962
 
-chon@grupo.cefet-rj.br
+  
+
