@@ -2,6 +2,11 @@
 
 ## How to Install?
 
+### MS Windows
+1 - Download and Install the [Oracle Virtual Box](https://www.virtualbox.org/wiki/Downloads)
+
+2 - Download and Import the [ContextNet Server Virtual Machine](https://sourceforge.net/projects/contextnet-server/)
+
 ### Debian 11
 In a terminal execute the commands below:
 
