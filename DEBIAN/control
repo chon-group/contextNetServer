@@ -1,9 +1,9 @@
 Package: contextnet-server
-Version: 0.1.1
+Version: 0.9.1
 Priority:
 Architecture: amd64
 Essential:
-Depends: openjdk-8-jre | temurin-8-jre, isc-dhcp-client
+Depends: openjdk-8-jre | temurin-8-jre
 Pre-depends: 
 Suggests:
 Installed-Size:

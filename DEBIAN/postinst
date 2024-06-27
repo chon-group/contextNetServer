@@ -1,11 +1,14 @@
 #!/bin/bash
-SKYNET_HOME="/opt/contextNetServer"
+#SKYNET_HOME="/opt/contextNetServer"
 
 # Modify the getty service file to enable autologin for root
-sed -i 's|ExecStart=-|#ExecStart=-|g' /lib/systemd/system/getty@.service 
-sed -i 's|\[Service\]|\[Service\]\nExecStart=-/sbin/agetty --autologin root --noclear %I $TERM|g' /lib/systemd/system/getty@.service
+#sed -i 's|ExecStart=-|#ExecStart=-|g' /lib/systemd/system/getty@.service 
+#sed -i 's|\[Service\]|\[Service\]\nExecStart=-/sbin/agetty --autologin root --noclear %I $TERM|g' /lib/systemd/system/getty@.service
 
-echo '/usr/bin/contextNetServer' >> /root/.profile
+#echo '/usr/bin/contextNetServer' >> /root/.profile
 
-sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
-update-grub
+#sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
+#update-grub
+systemctl daemon-reload
+systemctl enable contextNetServer.service
+systemctl start contextNetServer.service
