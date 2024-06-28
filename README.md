@@ -18,6 +18,9 @@ sudo apt update
 sudo apt install contextnet-server -y
 ```
 
+2. After installation, you can verify the service status with command: __systemctl status contextNetServer__
+![](https://github.com/chon-group/contextNetServer/assets/32855001/f2153c27-42d3-4a69-bb16-31c6027330bb)
+
 ## How to Use?
 
 ### How to Use: via [ChonIDE](https://ide.chon.group/) 
