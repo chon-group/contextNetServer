@@ -1,5 +1,5 @@
 Package: contextnet-server
-Version: 0.9.1
+Version: 0.9.2
 Priority:
 Architecture: amd64
 Essential:
@@ -11,4 +11,4 @@ Maintainer: chon@grupo.cefet-rj.br
 Conflicts:  
 Replaces:
 Provides:
-Description: Project ContextNet aims at provisioning context services for wide- and large-scale pervasive collaborative applications such as on-line monitoring or coordination of mobile entities' activities, and information sharing through social networks. These entities may be users of portable devices, such as smartphones, vehicles, or autonomic mobile robots. In the ContextNet project, communication and context distribution capabilities are implemented in the Scalable Data Distribution Layer (SDDL), while other services and extensions are built as software modules on top of this distribution layer. Together, these software modules form the ContextNet middleware. In this wiki, you will find information on how to download and use the ContextNet middleware. More information in http://wiki.lac.inf.puc-rio.br/doku.php
+Description: Project ContextNet aims at provisioning context services for wide- and large-scale pervasive collaborative applications such as on-line monitoring or coordination of mobile entities' activities, and information sharing through social networks. These entities may be users of portable devices, such as smartphones, vehicles, or autonomic mobile robots. In the ContextNet project, communication and context distribution capabilities are implemented in the Scalable Data Distribution Layer (SDDL), while other services and extensions are built as software modules on top of this distribution layer. Together, these software modules form the ContextNet middleware. More information in http://wiki.lac.inf.puc-rio.br/doku.php
