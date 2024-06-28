@@ -1,5 +1,5 @@
 Package: contextnet-server
-Version: 0.9.2
+Version: 0.9.3
 Priority:
 Architecture: amd64
 Essential:
