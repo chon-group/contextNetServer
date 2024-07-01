@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ -d /run/systemd/system ]; then
+    systemctl stop contextNetServer.service
+fi
+systemctl disable contextNetServer.service

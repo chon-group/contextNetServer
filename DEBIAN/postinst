@@ -1,4 +1,6 @@
 #!/bin/bash
-systemctl daemon-reload
 systemctl enable contextNetServer.service
-systemctl start contextNetServer.service
+if [ -d /run/systemd/system ]; then
+    systemctl daemon-reload
+    systemctl start contextNetServer.service
+fi
